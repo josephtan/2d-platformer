@@ -15,6 +15,10 @@ run/main_scene="uid://ipjq7jpc4o8i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://Scripts/player_stats.gd"
+
 [dotnet]
 
 project/assembly_name="2D-platformer"
