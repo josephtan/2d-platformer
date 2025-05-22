@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1iksqk7cnnl"]
+
+[ext_resource type="Texture2D" uid="uid://ijrp8bk3huap" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://cctravj1o06v3" path="res://Scripts/menu.gd" id="1_xhh6f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rerr"]
+font_size = 48
+font_color = Color(1, 1, 0.152941, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.717647)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhh6f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_1rerr")
+expand_mode = 4
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 136.0
+offset_right = 935.0
+offset_bottom = 194.0
+text = "2D platformer Game"
+label_settings = SubResource("LabelSettings_1rerr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 279.0
+offset_right = 712.0
+offset_bottom = 357.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 377.0
+offset_right = 715.0
+offset_bottom = 455.0
+text = "Quit"
+
+[connection signal="pressed" from="Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_button_pressed"]
